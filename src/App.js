@@ -24,6 +24,7 @@ export class App extends Component {
 
   }
   submitData=(e)=>{
+    let axiosResposne= axios.get(`https://us1.locationiq.com/v1/search.php?key=pk.ea18e02e564491ab24720e046283f45f&city=Amman&format=json`)
     e.preventDefault()
     this.setState({
 
