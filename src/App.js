@@ -43,33 +43,33 @@ export class App extends Component {
     }
   }
 
-}
 
-render(){
-  return (
-    <div>
-      <form onSubmit={this.submitData}>
-        <input type='text' placeholder='city explorer' onChange={(e) => { this.cityNameChange(e) }} />
-        <button onClick>Explor city</button>
-      </form>
-      <h1>{this.state.displayName}</h1>
-      <h3>{this.state.latitude}</h3>
-      <h3>{this.state.longitude}</h3>
 
-      <Card className="text-center">
-        <Card.Header>city Explorere</Card.Header>
-        <Card.Body>
-          <Card.Title>{this.state.displayName}</Card.Title>
-          <Card.Text>
-          {this.state.latitude}
-          {this.state.longitude}
-          </Card.Text>
-          <Card.Img variant="top" src={`https://maps.locationiq.com/#zoom=10.44&lat=31.972154&lon=35.903662&style=Dark=${this.state.latitude},${this.state.longitude}&zoom=20&format=png`}width='400px' height='400px />
-        </Card.Body>
-      </Card>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.submitData}>
+          <input type='text' placeholder='city explorer' onChange={(e) => { this.cityNameChange(e) }} />
+          <button onClick>Explor city</button>
+        </form>
+        <h1>{this.state.displayName}</h1>
+        <h3>{this.state.latitude}</h3>
+        <h3>{this.state.longitude}</h3>
+
+        <Card className="text-center">
+          <Card.Header>city Explorere</Card.Header>
+          <Card.Body>
+            <Card.Title>{this.state.displayName}</Card.Title>
+            <Card.Text>
+              {this.state.latitude}
+              {this.state.longitude}
+            </Card.Text>
+            <Card.Img variant="top" src={`https://maps.locationiq.com/#zoom=10.57&lat=31.983808&lon=35.908411&style=Streets=${this.state.latitude},${this.state.longitude}&zoom=20&format=png`} width='400px' height='400px ' />
+          </Card.Body>
+        </Card>
+      </div>
+    )
   }
 
 
-export default App
+} export default App
